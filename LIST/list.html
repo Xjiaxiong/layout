@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多行多列列表</title>
+    <style type="text/css">
+        a{text-decoration: none;}
+        body{font-family: "Microsoft JhengHei";font-size: 14px;}
+        *{margin:0px;padding:0px;}
+        ul{list-style: none;}
+        #box{height:auto; width: 550px;border:1px solid #aaa;margin: 0 auto; overflow: hidden;}
+        .top a{height: 16px; width: 16px;display:block; float: right;
+            margin:5px;}
+        .btn-list-off{background: no-repeat;background-color: #222222;}
+        .btn-list-off{background:#fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -38px 0px; }
+        .btn-card-on{background:#fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -21px -34px;}
+        .btn-list-on{background:#fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -21px 0px;}
+        .btn-car-off{background:#fff url(http://img.mukewang.com/53ab7e86000153cc00710057.jpg) no-repeat -38px -32px;}
+        #box ul li {height:auto;width: 164px;border: 1px solid #aaa;float: left; margin: 5px;  }
+        .a-img{height:149px;width: 164px;display: block; overflow: hidden;}
+        p a ,p span{display: block;line-height: 23px;padding-left: 10px;}
+        .bot{background-color:#ccc; height: 20px;line-height: 20px;text-align: center; }
+        .small{height:50px;width:50px;float:left;margin:5px;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            // 添加页面加载完成时的事件,然后执行以下代码。
+            var listBtn = document.getElementById("btn1");
+            var carBtn = document.getElementById("btn2");
+            // 获取多个图片对象
+            var  imgs = document.getElementsByTagName("img");
+            listBtn.onclick = function(){
+
+                // 改变按钮的class的值
+                listBtn.className="btn-list-on";
+                carBtn.className="btn-car-off";
+                // 改变每一个图片的路径以及它的对应的父节点的class的值
+                for(var i=0;i<imgs.length;i++)
+                {
+
+                    for(var i=0;i<imgs.length;i++){
+                        imgs[i].src="src/img/DSC04272.JPG/";
+                        imgs[i].parentNode.className="a-img small";
+                    }
+                }
+            }
+            carBtn.onclick = function(){
+                listBtn.className  = "btn-list-off";
+                carBtn.className = "btn-car-on";
+                for(var i=0;i<imgs.length;i++)
+                {
+                    imgs[i].src = "src/img/DSC04272.JPG/";
+                    imgs[i].parentNode.className = "a-img";
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<div id="box">
+     <div class="top">
+         <a href="#" title="列表模式"  id="btn1" class="btn-list-off"></a>
+         <a href="#" title="卡片模式"  id="btn2"  class="btn-card-on"></a><br><br >
+     </div>
+    <ul>
+        <li>
+            <div class="con">
+            <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+            <p>
+                <a href="#">许文超</a>
+                <span>云南文山</span>
+                <span>21个共同好友</span>
+            </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+                <p>
+                    <a href="#">许文超</a>
+                    <span>云南文山</span>
+                    <span>21个共同好友</span>
+                </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+                <p>
+                    <a href="#">许文超</a>
+                    <span>云南文山</span>
+                    <span>21个共同好友</span>
+                </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+                <p>
+                    <a href="#">许文超</a>
+                    <span>云南文山</span>
+                    <span>21个共同好友</span>
+                </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+                <p>
+                    <a href="#">许文超</a>
+                    <span>云南文山</span>
+                    <span>21个共同好友</span>
+                </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+        <li>
+            <div class="con">
+                <a href="#" class="a-img"><img src="src/img/DSC04272.JPG/"></a>
+                <p>
+                    <a href="#">许文超</a>
+                    <span>云南文山</span>
+                    <span>21个共同好友</span>
+                </p>
+            </div>
+            <div class="bot">未分组的好友</div>>
+        </li>
+
+    </ul>
+</div>
+</body>
+</html>
